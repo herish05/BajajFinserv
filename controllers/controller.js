@@ -61,8 +61,7 @@ export const handlebfhl = async(req,res)=>{
         data: result,
       });
     } catch (err) {
-        console.log(err);
-      res.status(500).json({ is_success: false, error: "Server Error" });
+      res.status(500).json({ is_success: false, error: err.response || "Server Error" });
     }
 }
 
