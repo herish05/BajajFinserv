@@ -1,4 +1,4 @@
-export function generateFibonacci(n) {
+export function fibonacci(n) {
   if (n < 0) throw new Error("Fibonacci input must be non-negative");
   if (n === 0) return [];
   if (n === 1) return [0];
@@ -22,7 +22,7 @@ export function isPrime(num) {
   return true;
 }
 
-export function filterPrimes(arr) {
+export function findPrimes(arr) {
   if (!Array.isArray(arr)) throw new Error("Prime input must be an array");
   return arr.filter((num) => {
     if (typeof num !== "number" || !Number.isInteger(num)) {
@@ -43,7 +43,7 @@ export function calculateGCD(a, b) {
   return a;
 }
 
-export function calculateHCF(arr) {
+export function findHCF(arr) {
   if (!Array.isArray(arr) || arr.length === 0) {
     throw new Error("HCF input must be a non-empty array");
   }
@@ -57,7 +57,7 @@ export function calculateHCF(arr) {
   return arr.reduce((hcf, num) => calculateGCD(hcf, num));
 }
 
-export function calculateLCM(arr) {
+export function findLCM(arr) {
   if (!Array.isArray(arr) || arr.length === 0) {
     throw new Error("LCM input must be a non-empty array");
   }
